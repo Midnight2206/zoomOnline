@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hướng dẫn Todo List</title>
+
+    <!-- PrismJS CSS (Highlight Theme) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.7;
+        background: #f8f9fa;
+        padding: 40px;
+        color: #333;
+      }
+      
+      pre {
+        border-radius: 6px;
+        overflow-x: auto;
+        margin-top: 10px;
+      }
+      .section {
+        background: white;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="section">
+      <h1>Xây dựng ứng dụng Todo List đơn giản bằng HTML, CSS và JavaScript</h1>
+
+      <h2>Giới thiệu</h2>
+      <p>
+        Todo List là một ứng dụng giúp bạn ghi chú những việc cần làm. Trong bài
+        viết này, bạn sẽ học cách xây dựng một ứng dụng đơn giản với 3 chức năng
+        cơ bản: <strong>thêm, hiển thị, xóa công việc</strong>. Không cần
+        framework, chỉ dùng HTML, CSS, JavaScript thuần.
+      </p>
+
+      <h2>Bước 1: Tạo cấu trúc HTML</h2>
+      <p>
+        Chúng ta cần một giao diện đơn giản: ô nhập công việc, nút thêm và danh
+        sách công việc.
+      </p>
+      <pre>
+        <code class="language-html">
+          &lt;input type="text" id="todo-input" placeholder="Nhập công việc..." /&gt;&lt;button id="add-btn"&gt;Thêm&lt;/button&gt;&lt;ul id="todo-list"&gt;&lt;/ul&gt;
+        </code>
+      </pre>
+      <h2>Bước 2: Thiết kế giao diện bằng CSS</h2>
+      <pre>
+        <code class="language-css">
+          body {
+            font-family: Arial;
+            background: #f2f2f2;
+           }
+
+          .todo-container {
+          background: white;
+          padding: 30px;
+          border-radius: 10px;
+          }
+        </code>
+      </pre>
+      <h2>Bước 3: Thêm chức năng bằng JavaScript</h2>
+      <pre>
+        <code class="language-javascript">
+          addBtn.addEventListener("click", () =&gt; {
+          const text = input.value.trim();
+          if (text !== "") {
+          const li = document.createElement("li");
+          li.innerHTML = `&lt;span&gt;${text}&lt;/span&gt;&lt;button class="delete-btn"&gt;X&lt;/button&gt;`;
+          list.appendChild(li);
+          input.value = "";
+            }
+          });
+
+          list.addEventListener("click", function (e) {
+            if (e.target.classList.contains("delete-btn")) {
+              const li = e.target.parentElement;
+              list.removeChild(li);
+            }
+          });
+        </code>
+     </pre>
+
+      <h2>Bonus: Thêm công việc bằng phím <code>Enter</code></h2>
+      <pre>
+        <code class="language-javascript">
+          input.addEventListener("keypress", function (e) {
+          if (e.key === "Enter") {
+          addBtn.click();
+            }
+          });
+        </code>
+      </pre>
+
+      <h2>Tổng kết</h2>
+      <ul>
+        <li>Tương tác DOM bằng JavaScript</li>
+        <li>Giao diện cơ bản với CSS</li>
+        <li>Tư duy xử lý dữ liệu người dùng</li>
+      </ul>
+    </div>
+
+    <!-- PrismJS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-html.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+  </body>
+</html>
