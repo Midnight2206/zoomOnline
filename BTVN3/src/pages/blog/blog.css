@@ -1,0 +1,50 @@
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 20px;
+    color: #242424;
+}
+h2 {
+    color: #6B6B6B;
+    font-size: 22px;
+    font-weight: 400;
+}
+h3 {
+    font-size: 28px;
+    font-weight: 600;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p, ul, ol, blockquote {
+    margin: 60px 0;
+    line-height: 1.6;
+}
+
+p a {
+    color: #242424;
+}
+h3 + p {
+    margin-top: 20px;
+}
+
+figcaption {
+    font-size: 14px;
+    color: rgb(107, 107, 107);
+    text-align: center;
+}
+figcaption > a {
+    color: rgb(107, 107, 107);
+}
+
+span {
+    background-color: rgb(232, 243, 232);
+}
+span:hover {
+    cursor: pointer;
+}
+span:focus {
+    background-color: rgb(163, 208, 162);
+}
