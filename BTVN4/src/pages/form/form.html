@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./form.css">
+</head>
+<body>
+    <h1>Register</h1>
+
+  <form action="#" autocomplete="off">
+
+    <label class="lable" for="displayName">Display Name</label>
+    <input class="input" type="text" id="displayName" name="displayName" spellcheck="false">
+
+    <label class="lable" for="email">Email</label>
+    <input class="input" type="email" id="email" name="email" spellcheck="false">
+
+    <label class="lable" for="phone">Phone Number</label>
+    <input class="input" type="tel" id="phone" name="phone" spellcheck="false">
+
+    <label class="lable" for="password">Password</label>
+    <input class="input" type="password" id="password" name="password">
+
+    <label class="lable" for="confirmPassword">Confirm Password</label>
+    <input class="input" type="password" id="confirmPassword" name="confirmPassword">
+
+    <label class="lable">Gender</label>
+    <label class="lable"><input type="radio" name="gender" value="male"> Male</label>
+    <label class="lable"><input type="radio" name="gender" value="female"> Female</label>
+    <label class="lable"><input type="radio" name="gender" value="other"> Other</label>
+
+    <label class="lable" for="dob">Date of Birth</label>
+    <input class="input" type="date" id="dob" name="dob">
+
+    <label class="lable" for="address">Address</label>
+    <input class="input" type="text" id="address" name="address" spellcheck="false">
+
+    <label class="lable">Profile Picture (Avatar)</label>
+    <div class="avatar-placeholder" id="avatarPreview">Click to select</div>
+    <input type="file" id="avatar" name="avatar" accept="image/*" style="display: none;">
+
+    <button class="button" type="submit">Register</button>
+  </form>
+</body>
+</html>
