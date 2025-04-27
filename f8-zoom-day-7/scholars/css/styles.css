@@ -303,7 +303,22 @@ button {
   gap: var(--spacing);
   justify-content: space-between;
 }
+.flash {
+    font-size: 1.8rem;
+    color: #fff;
+    width: 140px;
+    height: 100px;
+    position: absolute;
+    top: -52px;
+    right: -77px;
+    z-index: 99;
+    transform: rotate(35deg);
+    padding: 74px 0 0 53px;
+    background-color: var(--secondary-color);
+}
 .card__item--container {
+  position: relative;
+  overflow: hidden;
   flex: 1 1
     calc(
       98% / var(--quantity-of-rows) - var(--spacing) *
@@ -543,17 +558,17 @@ button {
   z-index: 1;
 }
 .footer__subscribe-btn::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #fff;
-    border-radius: 20px;
-    transform: scale(0);
-    transition: transform .3s ease-in-out
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  border-radius: 20px;
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
 }
 .footer__subscribe-btn:hover {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
@@ -564,14 +579,14 @@ button {
 }
 /* Scroll Top Btn */
 .scroll-top {
-    width: 40px;
-    height: 40px;
-    position: fixed;
-    bottom: 5px;
-    right: 5px;
-    z-index: 99;
-    color: var(--white-color);
-    background-color: var(--secondary-color);
-    text-align: center;
-    line-height: 40px;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  z-index: 99;
+  color: var(--white-color);
+  background-color: var(--secondary-color);
+  text-align: center;
+  line-height: 40px;
 }
